@@ -1,5 +1,5 @@
 ---
-name: 'EPIC: <NAME>'
+name: 'EPIC: <TITLE>'
 about: Default EPIC template
 title: ''
 labels: EPIC
