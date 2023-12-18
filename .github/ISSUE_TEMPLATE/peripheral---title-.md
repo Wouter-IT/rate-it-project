@@ -1,7 +1,7 @@
 ---
 name: 'PERIPHERAL: <TITLE>'
 about: Default project peripherals template
-title: ''
+title: 'PERIPHERAL: <TITLE>'
 labels: Peripheral
 assignees: ''
 
