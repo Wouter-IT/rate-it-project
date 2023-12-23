@@ -31,6 +31,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-wouterit-rateitproject-ybxc114qcob.ws-eu107.gitpod.io', 'rate-it-app-42eb5e036430.herokuapp.com']
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeanyapp.com",
+    "https://*.herokuapp.com"
+]
+
 
 # Application definition
 
