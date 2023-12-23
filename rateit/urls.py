@@ -19,5 +19,6 @@ from django.urls import path
 from goodnews.views import setup_check
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('goodnews/', setup_check, name='goodnews'),
 ]
