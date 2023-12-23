@@ -15,7 +15,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name="post_likes", blank=True)
-    reported = models.BooleanField()
+    reported = models.BooleanField(default=False)
     reports = models.ManyToManyField(Uer, related_name="post_reports")
 
 
@@ -27,5 +27,5 @@ class Comment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     edited_on = models.DateTimeField(auto_now=True)
     likes = models.ManyToManyField(User, related_name="comment_likes", blank=True)
-    reported = models.BooleanField()
+    reported = models.BooleanField(default=False)
     reports = models.ManyToManyField(Uer, related_name="post_reports")
