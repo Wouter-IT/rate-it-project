@@ -18,3 +18,14 @@ class Post(models.Model):
     reported = models.BooleanField()
     reports = models.ManyToManyField(Uer, related_name="post_reports")
 
+
+class Comment(models.Model):
+
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="post_comments")
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    edited_on = models.DateTimeField(auto_now=True)
+    likes = models.ManyToManyField(User, related_name="comment_likes", blank=True)
+    reported = models.BooleanField()
+    reports = models.ManyToManyField(Uer, related_name="post_reports")
