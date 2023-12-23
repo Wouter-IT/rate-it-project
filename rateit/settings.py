@@ -31,12 +31,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['8000-wouterit-rateitproject-ybxc114qcob.ws-eu107.gitpod.io', 'rate-it-app-42eb5e036430.herokuapp.com']
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://*.codeanyapp.com",
-    "https://*.herokuapp.com"
-]
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -94,6 +88,10 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeanyapp.com",
+    "https://*.herokuapp.com"
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
